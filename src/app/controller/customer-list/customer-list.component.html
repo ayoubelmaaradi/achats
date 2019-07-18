@@ -1,0 +1,25 @@
+<p>customer-list works!</p>
+<div class="container">
+  <table class="table-bordered table">
+    <thead>
+    <th>id</th>
+    <th>name</th>
+    <th>tele</th>
+    <th>email</th>
+    <th>adress</th>
+    <th>ice</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let com of customers">
+      <td>{{ com.id }}</td>
+      <td>{{ com.name }}</td>
+      <td>{{ com.tele }}</td>
+      <td>{{ com.email }}</td>
+      <td>{{ com.adress}}</td>
+      <td>{{ com.ice}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

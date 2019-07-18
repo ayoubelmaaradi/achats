@@ -1,0 +1,39 @@
+<p>order-item-create works!</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        OrderItem create Form
+      </div>
+      <div class="card-body">
+        <label for="id">Id</label>
+        <input class="form-control" name="id" type="number" id="id" [(ngModel)]="orderItem.id">
+        <label for="qte">qte</label>
+        <input class="form-control" name="qte" type="text" id="qte" [(ngModel)]="orderItem.qte">
+        <label for="design">Produit</label>
+        <input class="form-control" name="design" type="text" id="design" [(ngModel)]="orderItem.product"><br>
+        <label for="order">Order</label>
+        <input class="form-control" name="design" type="text" id="order" [(ngModel)]="orderItem.order"><br>
+        <button class="btn btn-success" (click)="addOrderItem()">Add orderItem</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <table class="table-bordered table">
+      <thead>
+      <th>id</th>
+      <th>qte</th>
+      <th>product</th>
+      <th>order</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let com of orderItems">
+        <td>{{ com.id }}</td>
+        <td>{{ com.qte}}</td>
+        <td>{{ com.product}}</td>
+        <td>{{ com.order}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
