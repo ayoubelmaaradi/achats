@@ -1,25 +1,37 @@
-<p>customer-list works!</p>
-<div class="container">
-  <table class="table-bordered table">
-    <thead>
-    <th>id</th>
-    <th>name</th>
-    <th>tele</th>
-    <th>email</th>
-    <th>adress</th>
-    <th>ice</th>
-    </thead>
-    <tbody>
-    <tr *ngFor="let com of customers">
+<p-table [value]="customers">
+  <ng-template pTemplate="caption">
+    List of Customers
+    <div class="ui-helper-clearfix">
+      <button type="button" pButton icon="pi pi-plus" iconPos="left" label="Add" style="float:right"></button>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>tele</th>
+      <th>email</th>
+      <th>adress</th>
+      <th>ice</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-com>
+    <tr >
       <td>{{ com.id }}</td>
       <td>{{ com.name }}</td>
       <td>{{ com.tele }}</td>
       <td>{{ com.email }}</td>
       <td>{{ com.adress}}</td>
       <td>{{ com.ice}}</td>
+      <td style="text-align:center">
+        <button pButton type="button" icon="pi pi-pencil" class="ui-button-info"></button>
+      </td>
+      <td style="text-align:center">
+        <button pButton type="button" icon="pi pi-trash" class="ui-button-danger"></button>
+      </td>
     </tr>
-    </tbody>
-  </table>
-</div>
 
-<router-outlet></router-outlet>
+  </ng-template>
+</p-table>

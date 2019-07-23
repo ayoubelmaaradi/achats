@@ -14,6 +14,12 @@ import { OrderCreateComponent } from './controller/order-create/order-create.com
 import { OrderListComponent } from './controller/order-list/order-list.component';
 import { OrderItemCreateComponent } from './controller/order-item-create/order-item-create.component';
 import { OrderItemListComponent } from './controller/order-item-list/order-item-list.component';
+import {TableModule} from 'primeng/table';
+import {SharedModule} from 'primeng/shared';
+import { ButtonModule } from 'primeng/components/button/button';
+import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/primeng';
+import { CustomerDetailComponent } from './controller/customer-detail/customer-detail.component';
 
 const routes: Routes = [
   {
@@ -56,14 +62,20 @@ const routes: Routes = [
     OrderCreateComponent,
     OrderListComponent,
     OrderItemCreateComponent,
-    OrderItemListComponent
+    OrderItemListComponent,
+    CustomerDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    TableModule,
+    SharedModule,
+    ButtonModule,
+    DialogModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

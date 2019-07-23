@@ -19,6 +19,16 @@
       "id": 66666666,
       "reference": "reference",
       "price": "0DesignAAAAAAAAAa"
+    },
+    {
+      "id": 66666667,
+      "reference": "",
+      "price": 0
+    },
+    {
+      "id": 894,
+      "reference": "juyuu",
+      "price": "500"
     }
   ],
   "customers": [
@@ -73,7 +83,6 @@
       "qte": 5000,
       "product": "",
       "order": ""
-
     },
     {
       "id": 3,
